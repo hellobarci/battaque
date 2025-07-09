@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu7sq7qsegybv"]
+
+[ext_resource type="Texture2D" uid="uid://w1ay3esfr2a5" path="res://icon.svg" id="1_02ohv"]
+[ext_resource type="Script" uid="uid://capaaf1i1hca8" path="res://player_character.gd" id="1_5up26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5up26"]
+size = Vector2(128, 128)
+
+[node name="PlayerCharacter" type="CharacterBody2D"]
+script = ExtResource("1_5up26")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_02ohv")
+
+[node name="Label" type="Label" parent="Sprite"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.0
+offset_top = -57.0
+offset_right = -44.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "STATE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5up26")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="WeaponAnchor" type="Marker2D" parent="WeaponPivot"]
+position = Vector2(100, 0)

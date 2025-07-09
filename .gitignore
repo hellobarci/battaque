@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Media folder ignores
+media/
+
+# Temp file ignores
+*.tmp

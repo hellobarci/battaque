@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwk4b1leu6t34"]
+
+[ext_resource type="PackedScene" uid="uid://cu7sq7qsegybv" path="res://player_character.tscn" id="1_78ovt"]
+[ext_resource type="Script" uid="uid://dyn7dye7sc4cd" path="res://scenes/scene_arena.gd" id="1_nep37"]
+[ext_resource type="PackedScene" uid="uid://q75ejrykh4p0" path="res://enemy_spawner.tscn" id="2_nep37"]
+[ext_resource type="Script" uid="uid://yhipcjuh1f8s" path="res://scenes/pause_canvas.gd" id="4_d36kh"]
+
+[node name="SceneArena" type="Node"]
+script = ExtResource("1_nep37")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_78ovt")]
+position = Vector2(200, 300)
+
+[node name="EnemySpawner" parent="." instance=ExtResource("2_nep37")]
+position = Vector2(900, 300)
+
+[node name="PauseCanvas" type="CanvasLayer" parent="."]
+process_mode = 2
+visible = false
+script = ExtResource("4_d36kh")
+
+[connection signal="enemy_mob_spawned" from="EnemySpawner" to="." method="_on_enemy_spawner_enemy_mob_spawned"]
