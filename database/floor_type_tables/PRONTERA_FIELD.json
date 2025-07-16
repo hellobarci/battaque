@@ -1,0 +1,107 @@
+[
+	{
+		"floorstart": 1,
+		"floorend": 3,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "COMBAT_CLEAR"
+	},
+	{
+		"floorstart": 2,
+		"floorend": 3,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "EVENT"
+	},
+	{
+		"floorstart": 4,
+		"floorend": 4,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "MINIBOSS"
+	},
+	{
+		"floorstart": 5,
+		"floorend": 5,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "REST"
+	},
+	{
+		"floorstart": 5,
+		"floorend": 5,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "SHOP"
+	},
+	{
+		"floorstart": 6,
+		"floorend": 7,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "COMBAT_SURVIVE"
+	},
+	{
+		"floorstart": 7,
+		"floorend": 7,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "EVENT"
+	},
+	{
+		"floorstart": 8,
+		"floorend": 8,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "MINIBOSS"
+	},
+	{
+		"floorstart": 9,
+		"floorend": 9,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "REST"
+	},
+	{
+		"floorstart": 9,
+		"floorend": 9,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "SHOP"
+	},
+	{
+		"floorstart": 10,
+		"floorend": 11,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "COMBAT_ESCAPE"
+	},
+	{
+		"floorstart": 10,
+		"floorend": 11,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "EVENT"
+	},
+	{
+		"floorstart": 12,
+		"floorend": 12,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "REST"
+	},
+	{
+		"floorstart": 12,
+		"floorend": 12,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "SHOP"
+	},
+	{
+		"floorstart": 13,
+		"floorend": 13,
+		"spawnweight": 10,
+		"floortype": "COMBAT_CLEAR",
+		"undefined": "BOSS"
+	}
+]

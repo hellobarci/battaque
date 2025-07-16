@@ -1,0 +1,23 @@
+[
+	{
+		"floorstart": 1,
+		"floorend": 13,
+		"spawnweight": 30,
+		"monster": "RATTATA",
+		"level": 1
+	},
+	{
+		"floorstart": 1,
+		"floorend": 13,
+		"spawnweight": 10,
+		"monster": "PIDGEY",
+		"level": 1
+	},
+	{
+		"floorstart": 1,
+		"floorend": 13,
+		"spawnweight": 5,
+		"monster": "PIDGEY",
+		"level": 2
+	}
+]

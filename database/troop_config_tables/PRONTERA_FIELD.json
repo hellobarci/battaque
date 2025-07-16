@@ -1,0 +1,11 @@
+[
+	{
+		"floorstart": 1,
+		"floorend": 13,
+		"mininitialtroopspawn": 2,
+		"maxinitialtroopspawn": 3,
+		"maxtroopspawn": 4,
+		"minspawndelay": 3,
+		"maxspawndelay": 6
+	}
+]

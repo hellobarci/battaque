@@ -1,0 +1,20 @@
+[
+	{
+		"floorstart": 1,
+		"floorend": 5,
+		"spawnweight": 10,
+		"troopspawnamount": 1
+	},
+	{
+		"floorstart": 6,
+		"floorend": 13,
+		"spawnweight": 20,
+		"troopspawnamount": 1
+	},
+	{
+		"floorstart": 6,
+		"floorend": 13,
+		"spawnweight": 10,
+		"troopspawnamount": 2
+	}
+]

@@ -1,6 +1,6 @@
 class_name Bullet extends Area2D
 
-const SPEED: float = 500.0
+const SPEED: float = 100.0
 
 var direction: Vector2 = Vector2.LEFT
 var faction: Game.Faction

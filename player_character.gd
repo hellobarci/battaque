@@ -36,7 +36,7 @@ func change_state(new_state: PlayerState) -> void:
 	
 
 func enter(player_state: PlayerState) -> void:
-	$Sprite/Label.text = PlayerState.keys()[player_state]
+	$Sprite/StateLabel.text = PlayerState.keys()[player_state]
 	match player_state:
 		PlayerState.IDLE:
 			pass
@@ -58,8 +58,9 @@ func exit(player_state: PlayerState) -> void:
 
 func _input(event: InputEvent) -> void:
 	# Direction Parser
-	var input_dir: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	set_velocity(input_dir * SPEED)
+	var input_direction: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	set_facing_direction(input_direction)
+	set_velocity(input_direction * SPEED)
 	
 	# State change to Attack
 	if Input.is_action_just_pressed("attack"):
@@ -68,7 +69,7 @@ func _input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	# State Manager
-	if current_state != PlayerState.MOVING and velocity > Vector2.ZERO:
+	if current_state != PlayerState.MOVING and velocity != Vector2.ZERO:
 		change_state(PlayerState.MOVING)
 	elif current_state != PlayerState.IDLE and velocity == Vector2.ZERO:
 		change_state(PlayerState.IDLE)
@@ -76,8 +77,10 @@ func _physics_process(delta: float) -> void:
 	# State Process
 	match current_state:
 		PlayerState.IDLE:
+			$Sprite.play("idle_" + facing_direction)
 			move_and_slide()
 		PlayerState.MOVING:
+			$Sprite.play("move_" + facing_direction)
 			move_and_slide()
 		PlayerState.ATTACKING:
 			move_and_slide()

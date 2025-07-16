@@ -8,8 +8,9 @@ func _init() -> void:
 	
 
 func shoot() -> void:
+	$Sprite.play("attack_west")
 	var new_bullet: Bullet = BULLET.instantiate()
-	new_bullet.set_faction(Game.Faction.ENEMY)
+	new_bullet.set_faction(self.faction)
 	Game.bullet_spawned.emit(new_bullet, self.global_position)
 	
 
