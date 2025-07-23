@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwk4b1leu6t34"]
+[gd_scene load_steps=6 format=3 uid="uid://cwk4b1leu6t34"]
 
 [ext_resource type="PackedScene" uid="uid://cu7sq7qsegybv" path="res://player_character.tscn" id="1_78ovt"]
 [ext_resource type="Script" uid="uid://dyn7dye7sc4cd" path="res://scenes/scene_arena.gd" id="1_nep37"]
 [ext_resource type="Script" uid="uid://yhipcjuh1f8s" path="res://scenes/pause_canvas.gd" id="4_d36kh"]
+[ext_resource type="PackedScene" uid="uid://vntggf3sdm56" path="res://stairs.tscn" id="4_tlpxm"]
+[ext_resource type="PackedScene" uid="uid://ce7jv8mimrm0n" path="res://treasure_chest.tscn" id="5_tlpxm"]
 
 [node name="SceneArena" type="Node"]
 script = ExtResource("1_nep37")
@@ -14,3 +16,21 @@ position = Vector2(200, 300)
 process_mode = 2
 visible = false
 script = ExtResource("4_d36kh")
+
+[node name="ColorRect" type="ColorRect" parent="PauseCanvas"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.466667, 0.466667, 0.466667, 0.466667)
+
+[node name="Stairs" parent="." instance=ExtResource("4_tlpxm")]
+position = Vector2(100, 200)
+
+[node name="TreasureChest" parent="." instance=ExtResource("5_tlpxm")]
+visible = false
+position = Vector2(200, 200)
+monitoring = false
+
+[connection signal="body_entered" from="Stairs" to="." method="_on_stairs_body_entered"]

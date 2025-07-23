@@ -22,6 +22,7 @@ func attack() -> void:
 	for area in get_overlapping_areas():
 		if area is Bullet:
 			print("Deflected: ", area)
+			Game.player_parried.emit()
 			targets_hit += 1
 			area.deflected(holder, Vector2.RIGHT)
 	

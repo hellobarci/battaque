@@ -1,5 +1,10 @@
 extends Node
 
+signal player_parried()
+signal player_died(player: PlayerCharacter)
+signal enemy_died(enemy_mob: EnemyMob)
+signal bullet_spawned(bullet: Bullet, spawn_position: Vector2)
+
 enum Faction { 
 		PLAYER, 
 		ENEMY, 
@@ -26,6 +31,6 @@ enum Monster {
 		PIDGEY,
 }
 
-signal player_died(player: PlayerCharacter)
-signal enemy_died(enemy_mob: EnemyMob)
-signal bullet_spawned(bullet: Bullet, spawn_position: Vector2)
+const SCENE_TITLE = preload("res://scenes/scene_title.tscn")
+const SCENE_HUB = preload("res://scenes/scene_hub.tscn")
+const SCENE_ARENA = preload("res://scenes/scene_arena.tscn")

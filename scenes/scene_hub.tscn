@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvpbmb3e5ho4m"]
+
+[ext_resource type="Script" uid="uid://dkftidgue6oe3" path="res://scenes/scene_hub.gd" id="1_i3mff"]
+[ext_resource type="PackedScene" uid="uid://cu7sq7qsegybv" path="res://player_character.tscn" id="1_k6p12"]
+
+[node name="SceneHub" type="Node"]
+script = ExtResource("1_i3mff")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_k6p12")]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 200.0
+offset_top = 200.0
+offset_right = 344.0
+offset_bottom = 231.0
+text = "ENTER DUNGEON"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

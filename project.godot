@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Battaque"
-run/main_scene="uid://cwk4b1leu6t34"
+run/main_scene="uid://cgnmt3ljieseh"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,11 +19,17 @@ config/icon="res://icon.svg"
 
 Game="*res://scripts/game.gd"
 DungeonManager="*res://scripts/dungeon_manager.gd"
+PlayerManager="*res://scripts/player_manager.gd"
 
 [debug]
 
 gdscript/warnings/untyped_declaration=1
 gdscript/warnings/inferred_declaration=1
+
+[display]
+
+window/stretch/scale=2.0
+window/stretch/scale_mode="integer"
 
 [input]
 

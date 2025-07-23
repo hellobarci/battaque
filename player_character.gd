@@ -25,6 +25,9 @@ func _ready() -> void:
 	new_weapon.miss.connect(on_miss)
 	$WeaponPivot/WeaponAnchor.add_child(new_weapon)
 	
+	# TODO: Connect the TriggerSlots to the scene
+	# This is a placeholder, actually make logic to create the default TS when the dungeon starts.
+	var trigger_slot = PlayerManager.get_trigger_slot()
 	
 
 # Finite State Machine
