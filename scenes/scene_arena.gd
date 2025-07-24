@@ -12,7 +12,6 @@ func _ready() -> void:
 	enemy_spawner.global_position.x = 600
 	add_child(enemy_spawner)
 	
-	Game.bullet_spawned.connect(_on_bullet_spawned)
 	Game.enemy_died.connect(_on_enemy_died)
 	
 	DungeonManager.floor_manager.floor_cleared.connect(_on_floor_cleared)
@@ -41,11 +40,6 @@ func _on_enemy_spawner_enemy_mob_spawned(enemy_mob: EnemyMob, spawn_position: Ve
 		# BUG: One enemy killed and each spawn evaluates that kill as valid, stacking reward canvases.
 		# Pause the game while reward canvas is up?
 		DungeonManager.floor_manager.add_enemy_count(1)
-	
-
-func _on_bullet_spawned(bullet: Bullet, spawn_position: Vector2) -> void:
-	bullet.global_position = spawn_position
-	add_child(bullet)
 	
 
 func _on_enemy_died(enemy_mob: EnemyMob) -> void:

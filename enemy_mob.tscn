@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bud3iydp77kd8"]
+[gd_scene load_steps=16 format=3 uid="uid://bud3iydp77kd8"]
 
 [ext_resource type="Script" uid="uid://c6bqtsgbw155a" path="res://enemy_mob.gd" id="1_md0ud"]
 [ext_resource type="Texture2D" uid="uid://8epb7c1cysah" path="res://media/animations/enemy/Attack-Anim.png" id="2_md0ud"]
+[ext_resource type="PackedScene" uid="uid://dckmv5cfalrpc" path="res://gun.tscn" id="3_wg1kx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wg1kx"]
 atlas = ExtResource("2_md0ud")
@@ -85,6 +86,7 @@ animations = [{
 size = Vector2(24, 24)
 
 [node name="EnemyMob" type="CharacterBody2D"]
+position = Vector2(100, 100)
 script = ExtResource("1_md0ud")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -96,7 +98,6 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_md0ud")
 
-[node name="AttackTimer" type="Timer" parent="."]
-autostart = true
+[node name="Gun" parent="." instance=ExtResource("3_wg1kx")]
 
-[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="attack_readied" from="Gun" to="." method="_on_gun_attack_readied"]

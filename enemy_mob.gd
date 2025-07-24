@@ -1,21 +1,18 @@
 class_name EnemyMob extends Creature
 
-const BULLET = preload("res://bullet.tscn")
-
 
 func _init() -> void:
 	set_faction(Game.Faction.ENEMY)
 	
 
-func shoot() -> void:
-	$Sprite.play("attack_west")
-	var new_bullet: Bullet = BULLET.instantiate()
-	new_bullet.set_faction(self.faction)
-	Game.bullet_spawned.emit(new_bullet, self.global_position)
+func _ready() -> void:
+	$Gun.set_holder(self)
 	
 
-func _on_attack_timer_timeout() -> void:
-	shoot()
+func _on_gun_attack_readied() -> void:
+	$Sprite.play("attack_west")
+	$Gun.look_at(Vector2(100, 100))
+	$Gun.shoot()
 	
 
 func die() -> void:

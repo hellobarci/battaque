@@ -3,7 +3,6 @@ extends Node
 signal player_parried()
 signal player_died(player: PlayerCharacter)
 signal enemy_died(enemy_mob: EnemyMob)
-signal bullet_spawned(bullet: Bullet, spawn_position: Vector2)
 
 enum Faction { 
 		PLAYER, 
